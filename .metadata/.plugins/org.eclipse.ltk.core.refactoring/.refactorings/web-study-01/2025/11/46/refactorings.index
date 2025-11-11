@@ -1,0 +1,15 @@
+1762756294106	Move 'helloworld.jsp' to 'java'
+1762756297744	Move 'helloworld.jsp' to 'main'
+1762756326810	Move 'helloworld.jsp' to 'WEB-INF'
+1762756332114	Move 'helloworld.jsp' to 'webapp'
+1762756871061	Rename resource 'index.jsp'
+1762757145432	Rename resource 'hh.jsp'
+1762757190889	Move 'index.jsp' to 'java'
+1762757210875	Move 'index.jsp' to 'webapp'
+1762757692835	Delete element
+1762760535855	Move file
+1762760611152	Copy compilation unit
+1762760614179	Delete element
+1762760697225	Delete element
+1762761399171	Copy file
+1762764367645	Move 'helloworld.jsp' to 'webapp'
