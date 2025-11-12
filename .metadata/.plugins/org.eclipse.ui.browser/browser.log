@@ -140,3 +140,51 @@
 11월 11, 2025 14:33:15.10 [3024:14544:1111/143315.100:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: QUOTA_EXCEEDED
 11월 11, 2025 14:46:05.30 Created TensorFlow Lite XNNPACK delegate for CPU.
 11월 11, 2025 14:46:05.41 [13300:4256:1111/144605.417:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: QUOTA_EXCEEDED
+
+11월 12, 2025 09:16:50.26 NEW SESSION
+11월 12, 2025 09:16:50.27 [11392:10728:1112/091650.268:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+11월 12, 2025 09:16:50.29 Created TensorFlow Lite XNNPACK delegate for CPU.
+11월 12, 2025 09:17:13.21 [11392:10728:1112/091713.217:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: QUOTA_EXCEEDED
+11월 12, 2025 09:18:27.62 Created TensorFlow Lite XNNPACK delegate for CPU.
+11월 12, 2025 09:18:27.70 [16700:13348:1112/091827.701:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+11월 12, 2025 09:18:53.71 [16700:13348:1112/091853.712:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+11월 12, 2025 09:19:47.02 [16700:13348:1112/091947.023:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+11월 12, 2025 09:59:34.23 Created TensorFlow Lite XNNPACK delegate for CPU.
+11월 12, 2025 09:59:34.36 [4688:6156:1112/095934.366:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: QUOTA_EXCEEDED
+11월 12, 2025 10:05:15.14 Created TensorFlow Lite XNNPACK delegate for CPU.
+11월 12, 2025 10:05:15.27 [12684:11728:1112/100515.278:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+11월 12, 2025 10:05:39.11 [12684:11728:1112/100539.112:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+11월 12, 2025 10:06:30.66 [12684:11728:1112/100630.664:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+11월 12, 2025 10:17:51.76 Created TensorFlow Lite XNNPACK delegate for CPU.
+11월 12, 2025 10:17:51.83 [9508:5180:1112/101751.838:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+11월 12, 2025 10:38:52.09 Created TensorFlow Lite XNNPACK delegate for CPU.
+11월 12, 2025 10:38:52.16 [2772:15712:1112/103852.164:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+11월 12, 2025 10:39:22.07 [2772:15712:1112/103922.077:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+11월 12, 2025 10:40:16.97 [2772:15712:1112/104016.972:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+11월 12, 2025 10:41:51.88 [2772:15712:1112/104151.885:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+11월 12, 2025 10:44:46.99 [2772:15712:1112/104446.992:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: QUOTA_EXCEEDED
+11월 12, 2025 11:15:29.21 Created TensorFlow Lite XNNPACK delegate for CPU.
+11월 12, 2025 11:15:29.34 [17496:18336:1112/111529.346:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+11월 12, 2025 11:15:59.41 [17496:18336:1112/111559.419:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+11월 12, 2025 11:16:40.40 [17496:18336:1112/111640.403:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: QUOTA_EXCEEDED
+11월 12, 2025 11:22:34.27 Created TensorFlow Lite XNNPACK delegate for CPU.
+11월 12, 2025 11:22:34.39 [2120:18008:1112/112234.390:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: QUOTA_EXCEEDED
+
+11월 12, 2025 12:49:10.62 NEW SESSION
+11월 12, 2025 12:49:10.63 Created TensorFlow Lite XNNPACK delegate for CPU.
+11월 12, 2025 12:49:10.70 [17400:15260:1112/124910.700:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: QUOTA_EXCEEDED
+11월 12, 2025 12:49:43.66 Created TensorFlow Lite XNNPACK delegate for CPU.
+11월 12, 2025 12:49:43.78 [17132:16388:1112/124943.782:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+11월 12, 2025 12:57:11.63 Created TensorFlow Lite XNNPACK delegate for CPU.
+11월 12, 2025 12:57:11.76 [2456:17848:1112/125711.761:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+11월 12, 2025 12:57:41.33 [2456:17848:1112/125741.339:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+11월 12, 2025 13:02:28.04 Created TensorFlow Lite XNNPACK delegate for CPU.
+11월 12, 2025 13:02:28.20 [6056:3080:1112/130228.205:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+11월 12, 2025 13:02:53.15 Created TensorFlow Lite XNNPACK delegate for CPU.
+11월 12, 2025 13:02:53.29 [4464:2272:1112/130253.292:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+11월 12, 2025 13:03:26.50 Created TensorFlow Lite XNNPACK delegate for CPU.
+11월 12, 2025 13:03:26.62 [10300:12140:1112/130326.620:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: QUOTA_EXCEEDED
+11월 12, 2025 13:06:05.44 Created TensorFlow Lite XNNPACK delegate for CPU.
+11월 12, 2025 13:06:05.58 [15368:17468:1112/130605.580:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: QUOTA_EXCEEDED
+11월 12, 2025 13:07:06.76 Created TensorFlow Lite XNNPACK delegate for CPU.
+11월 12, 2025 13:07:06.88 [11984:15784:1112/130706.884:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: QUOTA_EXCEEDED
