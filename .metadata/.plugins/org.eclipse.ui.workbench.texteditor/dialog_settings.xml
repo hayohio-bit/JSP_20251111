@@ -8,6 +8,10 @@
 	<section name="java.lang.Class">
 		<item key="replaceBarOpen" value="false"/>
 		<list key="findhistory">
+			<item value="login"/>
+			<item value="loginCheck"/>
+			<item value="vo"/>
+			<item value="VO"/>
 			<item value="Simple"/>
 			<item value="date"/>
 			<item value="setAttribute"/>
