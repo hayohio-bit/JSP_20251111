@@ -9,4 +9,12 @@
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="com.saeyan.dto.MemberVO"/>
+    <fullyQualifiedTypeName name="javax.management.modelmbean.ModelMBeanOperationInfo"/>
+    <fullyQualifiedTypeName name="org.apache.jasper.compiler.Node.ForwardAction"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+    <fullyQualifiedTypeName name="com.saeyan.dao.MemberDAO"/>
 </qualifiedTypeNameHistroy>

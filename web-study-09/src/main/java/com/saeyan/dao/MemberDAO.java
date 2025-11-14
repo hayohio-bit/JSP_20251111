@@ -86,7 +86,7 @@ public class MemberDAO {
 	// 아이디로 회원 정보 가져오는 메소드
 	public MemberVO getMember(String userid) {
 		
-		MemberVO mvo = null;
+		MemberVO mvo = new MemberVO();
 		String sql = "select * from member where userid = ?";
 		
 		Connection con = null;
@@ -125,4 +125,102 @@ public class MemberDAO {
 		
 		return mvo;
 	} //end getMember
+	
+	public int confirmID(String userid) {
+		// result : -1 아이디 사용 가능
+		// result : 1 아이디 사용 불가(중복)
+		int result = -1;
+		
+		String sql = "select userid from member where userid = ?";
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		try {
+			con = getConnection();	//DB연결
+			pstmt = con.prepareStatement(sql); //sql 구문 전송... sql 에러체크
+			pstmt.setString(1, userid);
+			
+			rs = pstmt.executeQuery(); // 실행 및 결과 반환
+			
+			if(rs.next()) {	//가져올 데이터 있는지
+				result = 1;
+			}
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				rs.close();
+				pstmt.close();
+				con.close();
+			}catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		return result;
+	}	// end confirmID
+
+	public int insertMember(MemberVO mvo) {
+		
+		int result = -1;
+		
+		String sql = "insert into member values(?,?,?,?,?,?)";
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		
+		try {
+			con = this.getConnection();	//DB연결
+			pstmt = con.prepareStatement(sql); //sql 구문 전송... sql 에러체크
+			pstmt.setString(1, mvo.getName());
+			pstmt.setString(2, mvo.getUserid());
+			pstmt.setString(3, mvo.getPwd());
+			pstmt.setString(4, mvo.getEmail());
+			pstmt.setString(5, mvo.getPhone());
+			pstmt.setInt(6, mvo.getAdmin());
+			
+			result = pstmt.executeUpdate(); // 실행 및 결과 반환
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				pstmt.close();
+				con.close();
+			}catch (Exception e) {
+				e.printStackTrace();
+			}
+		}	// end finally
+		return result;
+	}	// end insertMember
+
+	public void updateMember(MemberVO mvo) {
+		
+		String sql = "update member set pwd=?, email=?, phone=?, admin=? where userid=?";
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		
+		try {
+			con = this.getConnection();	//DB연결
+			pstmt = con.prepareStatement(sql); //sql 구문 전송... sql 에러체크
+			pstmt.setString(1, mvo.getPwd());
+			pstmt.setString(2, mvo.getEmail());
+			pstmt.setString(3, mvo.getPhone());
+			pstmt.setInt(4, mvo.getAdmin());
+			pstmt.setString(5, mvo.getUserid());
+			
+			pstmt.executeUpdate(); // 실행 및 결과 반환
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				pstmt.close();
+				con.close();
+			}catch (Exception e) {
+				e.printStackTrace();
+			}
+		}	// end finally
+	}	// end updateMember
+
 }
