@@ -14,6 +14,8 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="click"/>
+			<item value="body"/>
 			<item value="mvo"/>
 			<item value="&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;"/>
 			<item value="represen"/>
