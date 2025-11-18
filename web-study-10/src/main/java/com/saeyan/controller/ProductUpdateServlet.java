@@ -13,22 +13,34 @@ import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 import com.saeyan.dao.ProductDAO;
 import com.saeyan.dto.ProductVO;
-
-@WebServlet("/productWrite.do")
-public class ProductWriteServlet extends HttpServlet {
+@WebServlet("/productUpdate.do")
+public class ProductUpdateServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
-	public ProductWriteServlet() {
-	}
-
+	
+    public ProductUpdateServlet() {
+    }
+    
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
-		request.getRequestDispatcher("product/productWrite.jsp")
+	
+		// 1. code 값 가져오기
+		String code = request.getParameter("code");
+		
+		// 2. ProductDAO 통해서 code값 전체 가져오기
+		ProductDAO pdao = ProductDAO.getInstance();
+		
+		ProductVO vo = pdao.selectProductByCode(code);
+		
+		// 3. request.setAttribute
+		request.setAttribute("product", vo);
+		
+		// 4. forward(productUpdate.jsp) 이동
+		request.getRequestDispatcher("product/productUpdate.jsp")
 			.forward(request, response);
-
+		
 	}
 
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
@@ -47,16 +59,13 @@ public class ProductWriteServlet extends HttpServlet {
 		MultipartRequest multi =
 				new MultipartRequest(request, path, sizeLimit, encType, new DefaultFileRenamePolicy());
 		
+		
+		int code = Integer.parseInt(multi.getParameter("code"));
 		String name = multi.getParameter("name");
-		
-		
-		
-		
-		
-		
-		//int price = Integer.parseInt(multi.getParameter("price"));
-		//▲ 위 코드에서 아래 코드로 수정. 금액 0,000 형식 가능하도록.
 		String priceStr = multi.getParameter("price");
+		String description = multi.getParameter("description");
+		
+		
 		if (priceStr == null || priceStr.trim().isEmpty()) {
 		    // 가격값이 없으면 에러 처리 (에러 페이지나 메시지)
 		    // 예시: response.sendRedirect("product/productWrite.jsp?error=price");
@@ -82,12 +91,15 @@ public class ProductWriteServlet extends HttpServlet {
 		// 파일 업로드		------- getFilesystemName
 		String pictureUrl = multi.getFilesystemName("pictureUrl");
 		
-		String description = multi.getParameter("description");
+		if(pictureUrl == null) {
+			pictureUrl = request.getParameter("nonmakeImg");
+		}
 
 //		String originName = multi.getOriginalFileName("description");
 //		System.out.println("originName : " + originName );
 	
 		ProductVO vo =new ProductVO();
+		vo.setCode(code);
 		vo.setName(name);
 		vo.setPrice(price);
 		vo.setDescription(description);
@@ -96,9 +108,10 @@ public class ProductWriteServlet extends HttpServlet {
 		ProductDAO pdao = ProductDAO.getInstance();
 		
 		// ProductDAO 클래스 insertProduct호출
-		pdao.insertProduct(vo);
+		pdao.updateProduct(vo);
 		
 		// post -> redirect -> get (PRG패턴)
 		response.sendRedirect("productList.do");
 	}
+
 }

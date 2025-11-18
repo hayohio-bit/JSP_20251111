@@ -22,14 +22,17 @@
             <th>수정</th>
             <th>삭제</th>
          </tr>
+         
          <c:forEach var="product" items="${productList}">
             <tr class="record">
-               <td>${product.code}</td>
-               <td>${product.name}</td>
-               <td>${product.price} 원</td>
-               <td><a href="productUpdate.do?code=${product.code}">상품 수정</a>
+               <td align="center">${product.code}</td>
+               <td style="padding-left:15px;">${product.name}</td>
+               <td style="text-align:right; padding-right:15px;">${product.price} 원</td>
+               <td align="center">
+               <a href="productUpdate.do?code=${product.code}">상품 수정</a>
                </td>
-               <td><a href="productDelete.do?code=${product.code}">상품 삭제</a>
+               <td align="center">
+               <a href="productDelete.do?code=${product.code}">상품 삭제</a>
                </td>
             </tr>
          </c:forEach>

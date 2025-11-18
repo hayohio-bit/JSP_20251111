@@ -14,6 +14,10 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="Check"/>
+			<item value="check"/>
+			<item value="price"/>
+			<item value="textarea"/>
 			<item value="click"/>
 			<item value="body"/>
 			<item value="mvo"/>

@@ -24,11 +24,11 @@
 				<tr>
 					<th>사 진</th>
 					<td><input type="file" name="pictureUrl"><br>
-						(주의사항 : 이미지를 변경하고자 할때만 선택하시오)</td>
+						<span style="font-size: 11px; margin-left:5px;">(주의사항 : 이미지를 변경하고자 할때만 선택하시오)</span></td>
 				</tr>
 				<tr>
 					<th>설 명</th>
-					<td><textarea cols="80" rows="10" name="description"></textarea></td>
+					<td><textarea cols="90" rows="10" name="description"></textarea></td>
 				</tr>
 			</table>
 			<br> <input type="submit" value="등록"

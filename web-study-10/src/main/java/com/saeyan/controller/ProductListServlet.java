@@ -20,7 +20,8 @@ public class ProductListServlet extends HttpServlet {
         super();
     }
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
+			throws ServletException, IOException {
 	
 		ProductDAO pdao = ProductDAO.getInstance();
 		
@@ -32,7 +33,8 @@ public class ProductListServlet extends HttpServlet {
 		.forward(request, response);
 	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
+			throws ServletException, IOException {
 		doGet(request, response);
 	}
 

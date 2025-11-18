@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+*{font-family: 'Nanum Gothic', '나눔고딕', sans-serif; }
+
 
 #wrap {
    width: 971px; /* 1024*768로 해상도를 맞추어서 설계 */
@@ -44,3 +46,10 @@ a:HOVER {
    text-decoration: underline; /* 밑줄 */
    color: green; /* 글 색상 */
 }
+
+textarea {
+	font-size: 12px; width:605px; line-height: 1.5;
+}
+
+
+
