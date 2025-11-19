@@ -6,7 +6,7 @@
 		<item key="DIALOG_Y_ORIGIN" value="294"/>
 	</section>
 	<section name="java.lang.Class">
-		<item key="replaceBarOpen" value="false"/>
+		<item key="replaceBarOpen" value="true"/>
 		<item key="selection" value=""/>
 		<item key="wrap" value="false"/>
 		<item key="casesensitive" value="false"/>
@@ -14,6 +14,10 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="&#x09;"/>
+			<item value="&#x09;↩"/>
+			<item value="&#x09;↩ "/>
+			<item value="bdao"/>
 			<item value="Check"/>
 			<item value="check"/>
 			<item value="price"/>
@@ -25,10 +29,6 @@
 			<item value="represen"/>
 			<item value="represe"/>
 			<item value="login"/>
-			<item value="loginCheck"/>
-			<item value="vo"/>
-			<item value="VO"/>
-			<item value="Simple"/>
 		</list>
 		<list key="replacehistory">
 		</list>

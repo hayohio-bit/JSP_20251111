@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+*{
+	font-family: 'Nanum Gothic', '나눔고딕', sans-serif;
+}
+
+#wrap {
+	width: 971px; /* 1024*768로 해상도를 맞추어서 설계 */
+	/* 가운데 정렬을 위한 바깥쪽 여백 설정 */
+	margin: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+body {
+  padding:1.5em;
+  background: #f5f5f5
+}
+
+table {
+  border:1px #a39485 solid;
+  font-size: .9em;
+  box-shadow: 0 2px 5px rgba(0,0,0,.25);
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 5px;
+  overflow: hidden;
+}
+  
+th {
+  font-weight: bold;
+  color: #fff;
+  background: #73685d;
+  border-right: 0.5px solid #aea59b; /* 세로줄 추가 */
+}
+  
+ td, th {
+  padding: 1em .5em;
+  vertical-align: middle;
+}
+
+/* 맨 마지막 칸은 border 없애서 두꺼워지지 않게 */
+td:last-child, th:last-child {
+  border-right: none;
+}
+  
+ td {
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  background: #fff;
+  border-right: 0.5px solid #e0dbd6; /* 세로줄 추가 */
+}
+
+a {
+  color: #73685d;
+}
+  
+@media all and (max-width: 768px) {
+    
+  table, th, td, tr {
+    display: block;
+  }
+  
+  th {
+    text-align: center;
+  }
+  
+  table {
+    position: relative; 
+    padding-bottom: 0;
+    border: none;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+  }
+  
+  th {
+    float: left;
+    white-space: nowrap;
+  }
+  
+  td {
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    white-space: nowrap;
+  }
+  
+  tr {
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  th {
+    border-bottom: 1px solid #a39485;
+  }
+  
+  td {
+    border-bottom: 1px solid #e5e5e5;
+  }
+  
+  
+  }
