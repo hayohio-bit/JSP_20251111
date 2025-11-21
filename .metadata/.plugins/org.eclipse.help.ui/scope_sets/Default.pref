@@ -1,2 +1,5 @@
-#Thu Nov 13 16:27:11 KST 2025
+#Fri Nov 21 11:46:05 KST 2025
 __DEFAULT__=true
+org.eclipse.help.ui.localSearch.master=true
+org.eclipse.sdk.Eclipse.master=true
+org.eclipse.sdk.Google.master=true

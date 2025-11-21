@@ -50,19 +50,27 @@ td:last-child, th:last-child {
 }
 
 a {
-  color: #73685d;
+  color: rgb(91, 83, 74);
 }
+
+a:HOVER {
+   text-decoration: underline; /* 밑줄 */
+   color: green; /* 글 색상 */
+}
+
+
+
+
+
+
+
+
   
 @media all and (max-width: 768px) {
-    
   table, th, td, tr {
-    display: block;
+    display: block;}
+  th {text-align: center;
   }
-  
-  th {
-    text-align: center;
-  }
-  
   table {
     position: relative; 
     padding-bottom: 0;

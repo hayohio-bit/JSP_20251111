@@ -6,7 +6,7 @@
 		<item key="DIALOG_Y_ORIGIN" value="294"/>
 	</section>
 	<section name="java.lang.Class">
-		<item key="replaceBarOpen" value="true"/>
+		<item key="replaceBarOpen" value="false"/>
 		<item key="selection" value=""/>
 		<item key="wrap" value="false"/>
 		<item key="casesensitive" value="false"/>
@@ -14,23 +14,29 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="board"/>
+			<item value="Board"/>
+			<item value="Boad"/>
+			<item value="list"/>
+			<item value="th"/>
+			<item value="상품명"/>
+			<item value="product"/>
+			<item value="bdao"/>
 			<item value="&#x09;"/>
 			<item value="&#x09;↩"/>
 			<item value="&#x09;↩ "/>
-			<item value="bdao"/>
 			<item value="Check"/>
 			<item value="check"/>
 			<item value="price"/>
 			<item value="textarea"/>
-			<item value="click"/>
-			<item value="body"/>
-			<item value="mvo"/>
-			<item value="&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;"/>
-			<item value="represen"/>
-			<item value="represe"/>
-			<item value="login"/>
 		</list>
 		<list key="replacehistory">
+			<item value="Product"/>
+			<item value="product"/>
+			<item value="detail"/>
+			<item value="num"/>
+			<item value="tr"/>
+			<item value="board"/>
 		</list>
 	</section>
 	<section name="org.eclipse.wst.html.ui.internal.preferences.ui.HTMLTemplatePreferencePage$HTMLEditTemplateDialog_dialogBounds">

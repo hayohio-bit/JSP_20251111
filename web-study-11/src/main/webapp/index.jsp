@@ -3,5 +3,6 @@
 
 <%
 	response.sendRedirect("BoardServlet?command=board_list");
+	//response.sendRedirect("BoardServlet?command=boardDetail");
 %>
 	

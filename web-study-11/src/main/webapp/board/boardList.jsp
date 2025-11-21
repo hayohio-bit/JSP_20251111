@@ -6,12 +6,13 @@
 <html>
 <head>
 <style>
-table {box-sizing: inherit;
+table {
+	box-sizing: inherit;
 }
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" type="text/css" href="css/shopping.css">
+<link rel="stylesheet" type="text/css" href="css/board.css">
 </head>
 <body>
 	<div id="wrap" align="center">
@@ -31,9 +32,11 @@ table {box-sizing: inherit;
 			<c:forEach var="board" items="${boardList }">
 				<tr class="record" align="center">
 					<td>${board.num }</td>
-					<td align="left">${board.title }</td>
+					<td align="left" style="text-decoration: none;"><a
+						style="text-decoration: none;"
+						href="BoardServlet?command=board_view&num=${board.num }">${board.title }</a></td>
 					<td>${board.name}</td>
-					<td><fmt:formatDate value="${board.writedate}" pattern="YYYY-MM-dd"/></td>
+					<td><fmt:formatDate value="${board.writedate}" pattern="YYYY-MM-dd" /></td>
 					<td>${board.readcount}</td>
 				</tr>
 			</c:forEach>

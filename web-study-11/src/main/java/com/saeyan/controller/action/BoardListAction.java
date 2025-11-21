@@ -12,19 +12,18 @@ import com.saeyan.dto.BoardVO;
 public class BoardListAction implements Action {
 
 	@Override
-	public void execute(HttpServletRequest request, HttpServletResponse response) 
+	public void execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-	
+
 		String url = "/board/boardList.jsp";
-		
+
 		BoardDAO bdao = BoardDAO.getInstance();
-		
+
 		List<BoardVO> list = bdao.selectAllBoards();
-		
+
 		request.setAttribute("boardList", list);
-		
-		request.getRequestDispatcher(url)
-			.forward(request, response);
-	
+
+		request.getRequestDispatcher(url).forward(request, response);
+
 	}
 }

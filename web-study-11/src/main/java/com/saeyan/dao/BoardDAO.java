@@ -3,6 +3,8 @@ package com.saeyan.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Timestamp;
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,6 +22,9 @@ public class BoardDAO {
 		return instance;
 	}
 
+	
+	
+	
 	public List<BoardVO> selectAllBoards() {
 		
 		// DB 연결 객체를 선언 (초기값 null)
@@ -93,7 +98,140 @@ public class BoardDAO {
 		}
 		// 최종적으로 게시글 목록 반환
 		return list;
-	}
+	} // end selectAllBoards
 
 	
+	
+	
+	public void insertBoard(BoardVO vo) {
+		
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		String sql = "insert into board(name, pass, email, title, content)"
+				+ " values(?, ?, ?, ?, ? )";
+		
+		try {
+			con = DBManager.getConnection();
+			pstmt = con.prepareStatement(sql);
+			
+			pstmt.setString(1, vo.getName());
+			pstmt.setString(2, vo.getPass());
+			pstmt.setString(3, vo.getEmail());
+			pstmt.setString(4, vo.getTitle());
+			pstmt.setString(5, vo.getContent());
+			
+			pstmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			DBManager.close(con, pstmt);
+		}
+	} // end insertBoard
+
+	public BoardVO selectOneByNum(int num) {
+		
+		BoardVO vo = new BoardVO();
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		String sql = "select * from board where num = ?";
+		
+		try {
+			con = DBManager.getConnection();
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, num);
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				vo.setNum(rs.getInt("num"));
+				vo.setName(rs.getString("name"));
+				vo.setEmail(rs.getString("email"));
+				vo.setPass(rs.getString("pass"));
+				vo.setTitle(rs.getString("title"));
+				vo.setContent(rs.getString("content"));
+				vo.setReadcount(rs.getInt("readcount"));
+				vo.setWritedate(rs.getTimestamp("writedate"));
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			DBManager.close(con, pstmt, rs);	
+		}return vo;
+	} // end selectOneByNum
+
+	public void updateReadCount(int num) {
+		
+		String sql = "update board set readcount = readcount+1 where num = ?";
+				
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		
+		try {
+			con = DBManager.getConnection();
+			pstmt = con.prepareStatement(sql);
+			
+			pstmt.setInt(1, num);
+			pstmt.executeUpdate();
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			DBManager.close(con, pstmt);
+		}
+	} // end updateReadCount
+
+	public void deleteBoard(int num) {
+		
+		String sql = "delete from board where num = ?";
+		
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		
+		try {
+			con = DBManager.getConnection();
+			pstmt = con.prepareStatement(sql);
+			
+			pstmt.setInt(1, num);
+			pstmt.executeUpdate();
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			DBManager.close(con, pstmt);
+		}
+	} // end deleteBoard
+	
+	public Timestamp getWritedate() {
+	    return Timestamp.from(Instant.now());
+	}
+
+
+	public void updateBoard(BoardVO vo) {
+		
+		String sql = "UPDATE board set name=?, pass=?, email=?, title=?, content=?, writedate=? WHERE num = ?";
+		Connection con = null;
+		PreparedStatement pstmt = null;
+			
+		try {
+			con = DBManager.getConnection();
+			pstmt = con.prepareStatement(sql);
+			
+			pstmt.setString(1, vo.getName());
+			pstmt.setString(2, vo.getPass());
+			pstmt.setString(3, vo.getEmail());
+			pstmt.setString(4, vo.getTitle());
+			pstmt.setString(5, vo.getContent());
+			pstmt.setTimestamp(6, getWritedate());
+			pstmt.setInt(7, vo.getNum());
+						
+			pstmt.executeUpdate();
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			DBManager.close(con, pstmt);
+		}
+		
+	}
 }
+	
